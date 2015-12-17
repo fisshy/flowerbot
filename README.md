@@ -1,24 +1,26 @@
-# flowerbot
-Hydroponics using arduino as microcontroller
+# Flowerbot
+Hydroponics using arduino as microcontroller - work in progress
 
-# Current Hardware
+## Current Hardware
 
 > [Arduino Uno R3](https://www.adafruit.com/products/50)
 
-> [Wires (3 male for water sebsir)](https://www.google.com/search?q=wire+jumpers)
+> [Wires (3 male for water sensor)](https://www.google.com/search?q=wire+jumpers)
 
 > [Funduino Water Sensor](https://www.google.com/search?q=funduino+water+sensor)
 
-# To integrate
-> Funduino Relay ( using 4 slots)
+## To integrate
+* Funduino Relay ( using 4 slots)
+* Water pump 
 
-> Water pump 
+## I'm running this on Windows 10
+* Visual Studio 2015 Community 
+* Visual C++ 
+* Python 2.7 
+* npm install using Visual Studios command prompt (so msbuild can be executed)
 
-# Dependencies
-> Windows 10
-> Visual Studio 2015 with Visual C++
-> Node.js
-> Python 2.7
+> [For other os, check this out](https://github.com/voodootikigod/node-serialport)
+
 
 # Installation
 ```js
