@@ -17,6 +17,7 @@ Hydroponics using arduino as microcontroller - work in progress
 * Visual Studio 2015 Community 
 * Visual C++ 
 * Python 2.7 
+* Node.js
 * npm install using Visual Studios command prompt (so msbuild can be executed)
 
 > [For other os, check this out](https://github.com/voodootikigod/node-serialport)
