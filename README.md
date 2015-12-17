@@ -31,4 +31,4 @@ $ node .\main.js
 ```
 
 #Current status
-[[https://slack-files.com/files-tmb/T03AB6K44-F0GU24V2B-adb12fd216/slack_for_ios_upload_720.jpg|alt=Arduino water sensor]]
+![current status](https://slack-files.com/files-tmb/T03AB6K44-F0GU24V2B-adb12fd216/slack_for_ios_upload_720.jpg)
