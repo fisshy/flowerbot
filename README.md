@@ -3,12 +3,13 @@ Hydroponics using arduino as microcontroller
 
 # Current Hardware
 
-> [Arduino Uno R3(https://www.adafruit.com/products/50)]
-> [Wires (3 male for water sebsir) (https://www.google.com/search?q=wire+jumpers)]
-> [Funduino Water Sensor(https://www.google.com/search?q=funduino+water+sensor)]
+> [Arduino Uno R3](https://www.adafruit.com/products/50)
+> [Wires (3 male for water sebsir)](https://www.google.com/search?q=wire+jumpers)
+> [Funduino Water Sensor](https://www.google.com/search?q=funduino+water+sensor)
 
 # To integrate
 > Funduino Relay ( using 4 slots)
+
 > Water pump 
 
 # Dependencies
@@ -20,12 +21,12 @@ Hydroponics using arduino as microcontroller
 # Installation
 ```js
 $ npm install
-```js
+```
 
 # Run
 ```js
 $ node .\main.js
-```js
+```
 
 #Current status
 > [[https://slack-files.com/files-tmb/T03AB6K44-F0GU24V2B-adb12fd216/slack_for_ios_upload_720.jpg|alt=Arduino water sensor]]
