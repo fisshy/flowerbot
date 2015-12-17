@@ -1,0 +1,26 @@
+{
+  "name": "flowerbot",
+  "version": "1.0.0",
+  "description": "Hydroponics bot",
+  "main": "main.js",
+  "dependencies": {
+    "cylon": "^1.2.0",
+    "cylon-firmata": "^0.23.0",
+    "cylon-gpio": "^0.27.0",
+    "cylon-i2c": "^0.23.0",
+    "johnny-five": "^0.9.16",
+    "serialport": "^2.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flower",
+    "hydroponics",
+    "bot",
+    "arduino"
+  ],
+  "author": "Joachim Karlsson",
+  "license": "ISC"
+}
