@@ -1,5 +1,6 @@
-const five = require("johnny-five");
+const five  = require("johnny-five");
 const board = new five.Board();
+const db    = low('db.json')
 
 const TEMPERATURE_MAX       = 25;
 const TEMPERATURE_INTERVAL  = 1000 * 5;
@@ -35,7 +36,13 @@ handleFans = (fans, thermometer) =>  {
 
         console.log("celcius", celsius);
 
-        if(celsius > TEMPERATURE_MAX) {
+        let fanOn = celsius > TEMPERATURE_MAX;
+
+        db.get('celsius')
+          .push({ fanOn, celsius })
+          .write()
+
+        if(fanOn) {
             console.log("fan running");
             startFans(fans);
             return;
@@ -92,12 +99,18 @@ handleLight = (light) => {
     }, LIGHT_INTERVAL);
 }
 
+initDb = () => {
+    db.defaults({ celsius: [] })
+    .write()
+}
+
 let fan1;
 let fan2;
 let pump;
 
 board.on("ready", () => {
-  // This requires OneWire support using the ConfigurableFirmata
+
+  initDb();
 
   let thermometer = new five.Thermometer({
     controller: "DS18B20",

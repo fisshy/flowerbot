@@ -8,7 +8,8 @@
     "cylon-firmata": "^0.23.0",
     "cylon-gpio": "^0.27.0",
     "cylon-i2c": "^0.23.0",
-    "johnny-five": "^0.10.7"
+    "johnny-five": "^0.10.7",
+    "lowdb": "^0.16.2"
   },
   "devDependencies": {},
   "scripts": {
