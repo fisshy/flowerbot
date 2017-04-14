@@ -8,12 +8,15 @@
     "cylon-firmata": "^0.23.0",
     "cylon-gpio": "^0.27.0",
     "cylon-i2c": "^0.23.0",
+    "express": "^4.15.2",
     "johnny-five": "^0.10.7",
-    "lowdb": "^0.16.2"
+    "lowdb": "^0.16.2",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "scripts": {
     "start": "node ./index.js",
+    "server": "node ./start-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

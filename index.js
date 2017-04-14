@@ -1,8 +1,10 @@
 const five  = require("johnny-five");
 const low   = require("lowdb");
+const server = require('./server.js');
 
 const board = new five.Board();
-const db    = low('db.json')
+const db    = low('db.json');
+
 
 const TEMPERATURE_MAX       = 25;
 const TEMPERATURE_INTERVAL  = 1000 * 30;
@@ -137,3 +139,5 @@ board.on("exit", () => {
     fan2.open();
     pump.open();
 });
+
+server.start();
