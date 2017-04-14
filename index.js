@@ -1,7 +1,7 @@
 const five = require("johnny-five");
 const board = new five.Board();
 
-const TEMPERATURE_MAX       = 20;
+const TEMPERATURE_MAX       = 25;
 const TEMPERATURE_INTERVAL  = 1000 * 5;
 
 const PUMP_INTERVAL         = 1000 * 60;
