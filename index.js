@@ -39,9 +39,10 @@ handleFans = (fans, thermometer) =>  {
         console.log("celcius", celsius);
 
         let fanOn = celsius > TEMPERATURE_MAX;
-
+        let date = new Date();
+        
         db.get('celsius')
-          .push({ fanOn, celsius })
+          .push({ fanOn, celsius, date })
           .write()
 
         if(fanOn) {
