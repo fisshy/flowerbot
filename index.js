@@ -53,7 +53,7 @@ handleFans = (fans, thermometer) =>  {
 
         stopFans(fans);
 
-    }, 5000);
+    }, TEMPERATURE_INTERVAL);
 }
 
 handlePump = (pump) => {
