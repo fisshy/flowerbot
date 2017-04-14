@@ -5,7 +5,7 @@ const board = new five.Board();
 const db    = low('db.json')
 
 const TEMPERATURE_MAX       = 25;
-const TEMPERATURE_INTERVAL  = 1000 * 5;
+const TEMPERATURE_INTERVAL  = 1000 * 30;
 
 const PUMP_INTERVAL         = 1000 * 60;
 const PUMP_DURATION         = 1000 * 20;
@@ -39,8 +39,8 @@ handleFans = (fans, thermometer) =>  {
         console.log("celcius", celsius);
 
         let fanOn = celsius > TEMPERATURE_MAX;
-        let date = new Date();
-        
+        let date = new Date().to;
+
         db.get('celsius')
           .push({ fanOn, celsius, date })
           .write()
