@@ -44,6 +44,7 @@ $.getJSON( "/db.json", function( db ) {
        legend: {
            enabled: false
        },
+       turboThreshold: 0,
        plotOptions: {
            area: {
                fillColor: {
