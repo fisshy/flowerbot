@@ -44,7 +44,6 @@ $.getJSON( "/db.json", function( db ) {
        legend: {
            enabled: false
        },
-       turboThreshold: 0,
        plotOptions: {
            area: {
                fillColor: {
@@ -83,6 +82,7 @@ $.getJSON( "/db.json", function( db ) {
        series: [{
            type: 'coloredarea',
            name: 'Temperatur',
+           turboThreshold: 0,
            data: data
        }]
    });
