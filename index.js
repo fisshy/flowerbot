@@ -6,7 +6,7 @@ const board = new five.Board();
 const db    = low('db.json');
 
 
-const TEMPERATURE_MAX       = 25;
+const TEMPERATURE_MAX       = 27;
 const TEMPERATURE_INTERVAL  = 1000 * 30;
 
 const PUMP_INTERVAL         = 1000 * 60;
