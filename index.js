@@ -65,7 +65,7 @@ handlePump = (pump) => {
     setInterval(() => {
 
         console.log("pump started");
-        pump.close();
+        pump.close(); // close == start
 
         setTimeout(() => {
             pump.open();
@@ -129,7 +129,7 @@ board.on("ready", () => {
   pump  = new five.Relay(6);
 
   handleFans([fan1, fan2], thermometer);
-  //handlePump(pump);
+  handlePump(pump);
   //handleLight(light);
 
 });
