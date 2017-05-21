@@ -45,7 +45,7 @@ handleFans = (fans, thermometer) =>  {
         let date = new Date();
 
         db.get('celsius')
-          .push({ fanOn, celsius, date })
+          .push({ fanOn: FAN_ON, celsius: celsius, date: date })
           .write()
 
         if(FAN_ON) {
