@@ -8,9 +8,10 @@ const db    = low('db.json');
 
 const TEMPERATURE_MAX       = 25;
 const TEMPERATURE_INTERVAL  = 1000 * 120;
+let   FAN_ON                = false;
 
-const PUMP_INTERVAL         = 1000 * 60;
-const PUMP_DURATION         = 1000 * 20;
+const PUMP_INTERVAL         = 1000 * 300;
+const PUMP_DURATION         = 1000 * 30;
 
 const LIGHT_INTERVAL        = 1000 * 60;
 const LIGHT_SPAN            = [
@@ -40,14 +41,14 @@ handleFans = (fans, thermometer) =>  {
 
         console.log("celcius", celsius);
 
-        let fanOn = celsius > TEMPERATURE_MAX;
+        FAN_ON = celsius > TEMPERATURE_MAX;
         let date = new Date();
 
         db.get('celsius')
           .push({ fanOn, celsius, date })
           .write()
 
-        if(fanOn) {
+        if(FAN_ON) {
             console.log("fan running");
             startFans(fans);
             return;
@@ -64,12 +65,14 @@ handlePump = (pump) => {
 
     setInterval(() => {
 
+        stopFans([fan1]);
         console.log("pump started");
         pump.close(); // close == start
 
         setTimeout(() => {
             pump.open();
             console.log("pump closed");
+            FAN_ON = false;
         }, PUMP_DURATION)
 
 
