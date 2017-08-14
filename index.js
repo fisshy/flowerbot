@@ -127,11 +127,11 @@ board.on("ready", () => {
 
   //let light = new five.Relay(4);
 
-  fan1  = new five.Relay(4);
+  //fan1  = new five.Relay(4);
   fan2  = new five.Relay(5);
-  pump  = new five.Relay(6);
+  pump  = new five.Relay(4); //6
 
-  handleFans([fan1, fan2], thermometer);
+  handleFans([fan2], thermometer);
   handlePump(pump);
   //handleLight(light);
 
